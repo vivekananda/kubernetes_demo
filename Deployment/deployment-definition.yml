@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: myapp-replicaset
+  name: myapp-deployment
   labels:
     app: myapp
     type: frontend
@@ -12,6 +12,7 @@ spec:
       name: myapp-pod
       labels:
         app: myapp
+        type: frontend
 
     spec:
       containers:
@@ -22,4 +23,3 @@ spec:
     matchLabels:
       app: myapp
       type: frontend
-
